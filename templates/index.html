@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Image App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Flask Image App</h1>
+        <p>Enter some text and see the magic!</p>
+        
+        <form action="/process" method="POST">
+            <div class="form-group">
+                <label for="user_text">Enter your text:</label>
+                <input type="text" id="user_text" name="user_text" 
+                       placeholder="Type something here..." required>
+            </div>
+            <button type="submit">Show Image</button>
+        </form>
+    </div>
+</body>
+</html>
